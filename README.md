@@ -33,7 +33,7 @@ VRChatで撮った写真、こんな悩みありませんか？
 
 ### 手順
 
-1. [**ダウンロードページ**](https://github.com/JunseiOgawa/VSA/releases](https://github.com/JunseiOgawa/VSA-Mainapp-Release/releases/))へ移動
+1. [**ダウンロードページ**](https://github.com/JunseiOgawa/VSA/releases](https://github.com/JunseiOgawa/VSA-Mainapp-Release/releases/)へ移動
 2. 最新版の`VSA-Setup-vX.X.X.exe`をダウンロード
 3. ダウンロードしたファイルを実行
 4. 画面の指示に従ってインストール
