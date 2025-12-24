@@ -1,6 +1,9 @@
 # VSA & VDI - VRChat写真管理アプリ
 
 <div align="center">
+
+![VSA Logo](./VSA/VSA-MainApp/src-tauri/icons/icon.png)
+
 **Virtual Snap Archive & Virtual Desktop Image**
 
 VRChat写真を簡単管理！撮影情報も自動で保存！
@@ -33,7 +36,7 @@ VRChatで撮った写真、こんな悩みありませんか？
 
 ### 手順
 
-1. [**ダウンロードページ**](https://github.com/JunseiOgawa/VSA/releases](https://github.com/JunseiOgawa/VSA-Mainapp-Release/releases/)へ移動
+1. [**ダウンロードページ**](https://github.com/JunseiOgawa/VSA-Mainapp-Release/releases/)へ移動
 2. 最新版の`VSA-Setup-vX.X.X.exe`をダウンロード
 3. ダウンロードしたファイルを実行
 4. 画面の指示に従ってインストール
