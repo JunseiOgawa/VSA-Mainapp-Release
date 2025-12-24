@@ -1,9 +1,6 @@
 # VSA & VDI - VRChat写真管理アプリ
 
 <div align="center">
-
-![VSA Logo](./VSA/VSA-MainApp/src-tauri/icons/icon.png)
-
 **Virtual Snap Archive & Virtual Desktop Image**
 
 VRChat写真を簡単管理！撮影情報も自動で保存！
