@@ -6,7 +6,18 @@ The Settings panel allows you to customize all aspects of VSA's appearance, beha
 
 Click the gear icon (⚙️) in the sidebar to open the Settings screen.
 
-The left menu displays 8 tabs, each controlling different aspects of the application.
+The left menu displays 10 tabs, each controlling different aspects of the application:
+
+1. **Appearance** - Theme and color settings, language selection
+2. **Animation** - Visual effects configuration
+3. **File** - File operations settings
+4. **Notification** - Notification settings
+5. **Shortcut** - Keyboard shortcut configuration
+6. **VDI** - VDI integration settings
+7. **Favorites** - Favorites management
+8. **System** - Auto-launch settings
+9. **X Post** - X posting preset management
+10. **Update** - Update settings
 
 ## Appearance Panel
 
@@ -317,6 +328,178 @@ Settings are stored in:
 1. Copy backup `settings.json` to `%APPDATA%\VSA\`
 2. Overwrite current file
 3. Restart VSA
+
+## System Panel
+
+Configure system-level application settings.
+
+### Auto-Launch Settings
+
+Configure automatic VSA launch when Windows starts.
+
+#### Enable/Disable Auto-Launch
+
+**When Enabled**:
+- VSA automatically launches each Windows startup
+- Available immediately after startup
+- Runs in background
+
+**When Disabled**:
+- Manual VSA launch required
+- Save Windows resources
+
+#### Startup Registration
+
+**How to Register**:
+1. Open "System" panel
+2. Toggle "Auto-Launch" ON
+3. Click "Register to Startup"
+4. Click "Yes" when admin dialog appears
+5. Registration to startup folder complete
+
+**Registration Location**:
+```
+C:\Users\[Username]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+```
+
+**How to Unregister**:
+1. Toggle "Auto-Launch" OFF
+2. Optionally delete from startup folder manually
+
+### Startup Options
+
+#### Background Launch
+
+VSA launches in background when Windows starts.
+
+**Background Launch**:
+- Window not displayed, minimized to taskbar
+- Photo monitoring auto-enables
+- File monitoring auto-starts
+
+#### Startup Behavior
+
+Select initial behavior on auto-launch.
+
+**Options**:
+- **Normal Launch**: Display gallery screen
+- **Background**: Launch without display
+- **Minimize**: Launch minimized to taskbar
+
+**Recommended**: "Background" (optimal for photo auto-monitoring)
+
+### Related Documentation
+
+See [Setup Wizard Guide](setup-wizard.md) for details.
+
+## X Post Panel
+
+Configure X posting feature settings.
+
+### Preset Management
+
+Save and manage frequently used posting settings.
+
+#### Preset List
+
+**Display Information**:
+- Preset name
+- Creation date/time
+- Last used date/time
+- Settings summary
+
+#### Create/Edit/Delete Presets
+
+**Create Steps**:
+1. Click "New Preset"
+2. Enter preset name
+3. Customize frame settings
+4. Click "Save"
+
+**Edit Steps**:
+1. Select preset to edit
+2. Change settings
+3. Click "Save"
+
+**Delete Steps**:
+1. Select preset to delete
+2. Click "Delete" button
+3. Click "Delete" in confirmation dialog
+
+### Template Settings
+
+Configure default text for X posting.
+
+#### Text Template
+
+**Default Text Field**:
+1. Enter initial post text in template field
+2. Can use variables (`{world}`, `{date}`, etc.)
+3. Click "Save"
+
+**Available Variables**:
+- `{world}` - World name
+- `{date}` - Capture time
+- `{camera}` - Camera type
+- `{user}` - Photographer name
+
+**Example**:
+```
+VRChat photo taken.
+World: {world}
+Time: {date}
+```
+
+#### Hashtag Settings
+
+Pre-register frequently used hashtags.
+
+**Add Hashtags**:
+1. Click "Add" in "Hashtags" section
+2. Enter hashtag (starts with `#`)
+3. Click "Save"
+
+**Using Hashtags**:
+- Registered hashtags display as suggestions
+- One-click add when posting
+
+**Delete Hashtags**:
+1. Select hashtag to delete
+2. Click "Delete" button
+
+### X Account Authentication
+
+Manage X (Twitter) account authentication.
+
+#### Check Auth Status
+
+**Display Information**:
+- Auth username
+- Auth date/time
+- Token expiration
+
+#### Re-authenticate
+
+Re-authenticate when token expires.
+
+**Re-auth Steps**:
+1. Click "Re-authenticate" button
+2. Browser opens to X (Twitter) auth page
+3. Click "Authorize"
+4. Return to VSA
+
+#### Remove Auth
+
+Remove X posting feature integration.
+
+**Remove Steps**:
+1. Click "Remove Authentication" button
+2. Click "Remove" in confirmation dialog
+3. X posting feature becomes inactive
+
+### Related Documentation
+
+See [X Posting Feature Guide](x-post-guide.md) for details.
 
 ## Tips
 

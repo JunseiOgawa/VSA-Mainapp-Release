@@ -4,11 +4,37 @@ The Game Config panel allows you to configure VRChat integration settings and en
 
 ## Overview
 
-The Game Config settings enable VSA to communicate with VRChat and automatically extract metadata such as world names, user information, and camera parameters.
+Game Config consists of the following 3 tabs:
+
+- **Display Settings Tab**: Configure file monitoring on/off, folder paths, and OSC communication
+- **Time Machine Tab**: Display VRChat instance history and rejoin features
+- **Server Tab**: Monitor VRChat server status
+
+Each tab can be switched from the tab menu at the top of the screen.
 
 **Access Method**:
 1. Click the settings gear icon (⚙️) in the sidebar
 2. Select "Game Config" from the left menu
+
+## Tab Composition
+
+### Display Settings Tab
+
+This is the default tab. Configure VRChat photo detection and OSC communication.
+
+See "Monitoring Status Management" and "Detailed Settings" sections below for details.
+
+### Time Machine Tab
+
+Display VRChat past instance history and rejoin worlds previously visited.
+
+See "Time Machine Feature" section for details.
+
+### Server Tab
+
+Monitor VRChat server status and maintenance information.
+
+See "Server Status Feature" section for details.
 
 ## Monitoring Status Management
 
@@ -239,6 +265,191 @@ Changes to Game Config settings are automatically detected.
 3. Delete `config.json` file
 4. Restart VSA
 5. Reconfigure Game Config settings
+
+## Time Machine Feature
+
+Time Machine tab displays VRChat past activity history and rejoin previously visited instances.
+
+### VRChat Timeline Feature
+
+Auto-analyze VRChat log files and visualize activity history.
+
+**Displayed Information**:
+- **World Changes**: Migration history between worlds
+- **User Events**: Other user join/leave events
+- **Timeline Display**: Activity history in chronological order
+
+**Timeline View**:
+1. Open Time Machine tab
+2. VRChat log files auto-analyze
+3. Timeline shows activity events
+4. Click event for details
+
+### Instance History Display
+
+View list of previously visited instances.
+
+**Display Information**:
+
+| Item | Description |
+|------|-------------|
+| World Name | VRChat world name |
+| Instance ID | Instance identifier |
+| Visit Time | Last visited date/time |
+| Stay Duration | Time spent in instance |
+| User Count | Users present at visit |
+
+**List Operations**:
+- Click world name to filter
+- Copy instance ID
+- Sort by date/time
+
+### Rejoin from History
+
+Directly rejoin from instance history.
+
+**Rejoin Steps**:
+1. Select instance to rejoin from history
+2. Click "Rejoin" button
+3. Auto-generate instance URL
+4. Rejoin dialog displays in VRChat
+5. Confirm to rejoin
+
+**Copy Instance URL**:
+1. Select instance
+2. Click "Copy URL" button
+3. Instance URL copies to clipboard
+4. Paste in VRChat Jump screen to move
+
+### Use Cases and Examples
+
+**Example 1: Revisit Favorite World**
+1. Find world in Time Machine
+2. Click "Rejoin"
+3. Move in VRChat executed
+
+**Example 2: Confirm Event World**
+1. Filter by event date
+2. Confirm visited worlds
+3. Revisit memory worlds
+
+**Example 3: Move to Friend's World**
+1. Check friend's timeline event
+2. Discover common visited world
+3. Rejoin with same world
+
+### Notes
+
+**Log File Required**:
+- VRChat log files required
+- Confirm "Log Folder" set correctly in "Display Settings Tab"
+
+**Private Instances**:
+- Private instance rejoin may require owner permission
+- Deleted instances not rejoinable
+
+**History Retention**:
+- Based on VRChat log files
+- History disappears when VRChat deletes logs
+
+### Troubleshooting
+
+**Instance History Not Displaying**:
+1. Check Log Folder setting
+   - Verify "Log Folder" setting correct in Display Settings Tab
+2. Enable VRChat logging
+   - Confirm logging enabled in VRChat settings
+3. Check recent logs
+   - Launch VRChat, move world, check log generation
+
+## Server Status Feature
+
+Server tab monitors VRChat server status and maintenance information.
+
+### VRChat Server Status Display
+
+Display official VRChat server status in real-time.
+
+**Display Information**:
+
+| Item | Description |
+|------|-------------|
+| Server Status | Online/Offline/Maintenance |
+| Status Icon | Visual status display |
+| Last Update | Status last updated date/time |
+| Details | Maintenance time, etc. |
+
+**How to Read Status**:
+- **Green**: All servers operating normally
+- **Yellow**: Some servers have issues
+- **Red**: Main servers down or maintenance
+
+### Maintenance Information
+
+View VRChat maintenance information.
+
+**Maintenance Information Content**:
+- **Start Time**: Scheduled maintenance start
+- **End Time**: Scheduled maintenance end
+- **Impact Range**: Affected services
+- **Description**: Maintenance details
+
+**Update Method**:
+1. Click "Update" button for latest info
+2. Auto-update periodically (default: every 5 minutes)
+
+### Status Send Settings
+
+Configure status sending to VRChat.
+
+#### Enable/Disable Status Send
+
+Toggle sending VSA status to VRChat.
+
+**When Enabled**:
+- Notify VRChat of VSA status
+- Viewable in VRChat
+
+**When Disabled**:
+- Stop status sending to VRChat
+- Reduce network communication
+
+#### Update Interval Setting
+
+Configure status update frequency.
+
+**Setting Values**:
+- **1 minute**: Always confirm latest (high network load)
+- **5 minutes**: Balanced setting (default)
+- **10 minutes**: Low network load
+- **30 minutes**: Minimal communication
+
+**Recommended**: 5-10 minutes (adjust per environment)
+
+### Usage Examples
+
+**Example 1: Confirm Maintenance Time**
+1. Open Server tab
+2. Check maintenance info
+3. Connect after end time
+
+**Example 2: Check Server Issue**
+1. Unable to connect to VRChat
+2. Check Server tab status
+3. If "red", server-side problem possible
+4. Contact support before troubleshooting
+
+### Troubleshooting
+
+**Status Info Not Updating**:
+1. Check internet connection
+   - Test internet with other apps
+2. Check firewall settings
+   - Confirm firewall not blocking VSA
+3. Manual update with "Update" button
+   - Periodic update may have failed
+4. Restart app
+   - Completely restart VSA
 
 ## Related Documentation
 
