@@ -2,6 +2,9 @@
 
 The Game Config panel allows you to configure VRChat integration settings and enable automatic metadata extraction for your screenshots.
 
+> **Note (Integral support status)**
+> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+
 ## Overview
 
 Game Config consists of the following 3 tabs:

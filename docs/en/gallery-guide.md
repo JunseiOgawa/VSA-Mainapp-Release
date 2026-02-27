@@ -2,6 +2,9 @@
 
 The gallery screen allows you to view imported photos in a list format, check detailed information, and perform operations such as adding favorites.
 
+> **Note (Integral support status)**
+> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+
 ## Display Modes
 
 The gallery has two display modes.

@@ -2,6 +2,9 @@
 
 This section covers frequently asked questions and solutions for common problems.
 
+> **Note (Integral support status)**
+> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+
 ## Frequently Asked Questions
 
 ### Images Not Displaying

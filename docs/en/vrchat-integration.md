@@ -2,6 +2,9 @@
 
 VSA automatically extracts and saves metadata from photos taken in VRChat. This guide explains the metadata VSA saves and how it works.
 
+> **Note (Integral support status)**
+> Integral support is currently in progress. Some Integral camera parameter values may not be recorded or displayed correctly.
+
 ## Metadata Overview
 
 When you take a photo in VRChat, VSA automatically embeds the following information into the PNG image.
