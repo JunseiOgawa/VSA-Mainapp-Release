@@ -1,0 +1,7 @@
+title: Virtual Snap Archive Documentation
+description: User documentation, terms, privacy policy, and license information for VSA.
+theme: jekyll-theme-cayman
+exclude:
+  - CLAUDE.md
+  - ja/CLAUDE.md
+  - tutorial/CLAUDE.md
