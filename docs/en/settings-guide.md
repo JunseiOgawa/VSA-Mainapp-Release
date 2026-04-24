@@ -1,23 +1,24 @@
 # Settings Guide - Complete Reference
 
-The Settings panel allows you to customize all aspects of VSA's appearance, behavior, and functionality across 8 different configuration panels.
+The Settings panel allows you to customize VSA's appearance, behavior, integrations, update checks, and user-facing legal/support information.
 
 ## Accessing Settings
 
 Click the gear icon (⚙️) in the sidebar to open the Settings screen.
 
-The left menu displays 10 tabs, each controlling different aspects of the application:
+The left menu includes these panels:
 
-1. **Appearance** - Theme and color settings, language selection
-2. **Animation** - Visual effects configuration
-3. **File** - File operations settings
-4. **Notification** - Notification settings
-5. **Shortcut** - Keyboard shortcut configuration
-6. **VDI** - VDI integration settings
-7. **Favorites** - Favorites management
-8. **System** - Auto-launch settings
-9. **X Post** - X posting preset management
-10. **Update** - Update settings
+1. **System** - startup and background behavior
+2. **Appearance** - theme, color, and language
+3. **Animation** - motion and transition settings
+4. **Game Settings** - watched folders, OSC, logs, and related settings
+5. **File** - file operation settings
+6. **Notification** - notification settings
+7. **Shortcut** - keyboard shortcuts
+8. **X Post** - posting presets and posting-related settings
+9. **Favorites** - favorites management
+10. **Update** - update checks and release notes
+11. **Other** - terms, privacy policy, licenses, external links, and important notices
 
 ## Appearance Panel
 
@@ -288,11 +289,9 @@ Control automatic update checking and version information.
 - Shows installed VSA version
 - Format: X.X.X
 
-**GitHub Releases Link**:
-- Click link to open GitHub Releases page in browser
-- View available versions
-- Download latest release if desired
-- Read changelog for each version
+**External Links**:
+- External links such as GitHub Releases and documentation have moved to the **Other** panel.
+- The Update panel now focuses on the installed version, release notes, and update checks.
 
 ### Update Notifications
 
@@ -300,6 +299,36 @@ When new version available:
 - Notification appears in UI
 - Can download or dismiss
 - Check can be done manually anytime
+
+## Other Panel
+
+The Other panel collects user-facing documents and notices.
+
+### Terms, Privacy, and Licenses
+
+You can open:
+
+- Terms of Service
+- Privacy Policy
+- License information
+- The latest privacy policy URL used for Google OAuth publishing settings
+
+### External Links
+
+You can open:
+
+- Documentation home
+- GitHub Releases
+
+### Important Notices
+
+The panel summarizes:
+
+- The correct app name is **Virtual Snap Archive**. VSA is unofficial and is not affiliated with, endorsed by, or supported by VRChat Inc., VirtualLens2, Integral, or their respective rights holders.
+- Core local features are free. Cloud storage and X API features may require payment beyond the free allowance.
+- External communication occurs when using VSA accounts, cloud storage, X posting, Turnstile, update checks, or server status features.
+- Broad local file permissions are used so users can choose watched folders and export destinations.
+- Windows installers may be unsigned and may trigger SmartScreen or security software warnings.
 
 ## Resetting All Settings
 
@@ -329,178 +358,6 @@ Settings are stored in:
 2. Overwrite current file
 3. Restart VSA
 
-## System Panel
-
-Configure system-level application settings.
-
-### Auto-Launch Settings
-
-Configure automatic VSA launch when Windows starts.
-
-#### Enable/Disable Auto-Launch
-
-**When Enabled**:
-- VSA automatically launches each Windows startup
-- Available immediately after startup
-- Runs in background
-
-**When Disabled**:
-- Manual VSA launch required
-- Save Windows resources
-
-#### Startup Registration
-
-**How to Register**:
-1. Open "System" panel
-2. Toggle "Auto-Launch" ON
-3. Click "Register to Startup"
-4. Click "Yes" when admin dialog appears
-5. Registration to startup folder complete
-
-**Registration Location**:
-```
-C:\Users\[Username]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
-```
-
-**How to Unregister**:
-1. Toggle "Auto-Launch" OFF
-2. Optionally delete from startup folder manually
-
-### Startup Options
-
-#### Background Launch
-
-VSA launches in background when Windows starts.
-
-**Background Launch**:
-- Window not displayed, minimized to taskbar
-- Photo monitoring auto-enables
-- File monitoring auto-starts
-
-#### Startup Behavior
-
-Select initial behavior on auto-launch.
-
-**Options**:
-- **Normal Launch**: Display gallery screen
-- **Background**: Launch without display
-- **Minimize**: Launch minimized to taskbar
-
-**Recommended**: "Background" (optimal for photo auto-monitoring)
-
-### Related Documentation
-
-See [Setup Wizard Guide](setup-wizard.md) for details.
-
-## X Post Panel
-
-Configure X posting feature settings.
-
-### Preset Management
-
-Save and manage frequently used posting settings.
-
-#### Preset List
-
-**Display Information**:
-- Preset name
-- Creation date/time
-- Last used date/time
-- Settings summary
-
-#### Create/Edit/Delete Presets
-
-**Create Steps**:
-1. Click "New Preset"
-2. Enter preset name
-3. Customize frame settings
-4. Click "Save"
-
-**Edit Steps**:
-1. Select preset to edit
-2. Change settings
-3. Click "Save"
-
-**Delete Steps**:
-1. Select preset to delete
-2. Click "Delete" button
-3. Click "Delete" in confirmation dialog
-
-### Template Settings
-
-Configure default text for X posting.
-
-#### Text Template
-
-**Default Text Field**:
-1. Enter initial post text in template field
-2. Can use variables (`{world}`, `{date}`, etc.)
-3. Click "Save"
-
-**Available Variables**:
-- `{world}` - World name
-- `{date}` - Capture time
-- `{camera}` - Camera type
-- `{user}` - Photographer name
-
-**Example**:
-```
-VRChat photo taken.
-World: {world}
-Time: {date}
-```
-
-#### Hashtag Settings
-
-Pre-register frequently used hashtags.
-
-**Add Hashtags**:
-1. Click "Add" in "Hashtags" section
-2. Enter hashtag (starts with `#`)
-3. Click "Save"
-
-**Using Hashtags**:
-- Registered hashtags display as suggestions
-- One-click add when posting
-
-**Delete Hashtags**:
-1. Select hashtag to delete
-2. Click "Delete" button
-
-### X Account Authentication
-
-Manage X (Twitter) account authentication.
-
-#### Check Auth Status
-
-**Display Information**:
-- Auth username
-- Auth date/time
-- Token expiration
-
-#### Re-authenticate
-
-Re-authenticate when token expires.
-
-**Re-auth Steps**:
-1. Click "Re-authenticate" button
-2. Browser opens to X (Twitter) auth page
-3. Click "Authorize"
-4. Return to VSA
-
-#### Remove Auth
-
-Remove X posting feature integration.
-
-**Remove Steps**:
-1. Click "Remove Authentication" button
-2. Click "Remove" in confirmation dialog
-3. X posting feature becomes inactive
-
-### Related Documentation
-
-See [X Posting Feature Guide](x-post-guide.md) for details.
-
 ## Tips
 
 - **Performance**: Disable animations if VSA feels slow on older hardware
@@ -514,4 +371,7 @@ See [X Posting Feature Guide](x-post-guide.md) for details.
 - [Keyboard Shortcuts Complete List](keyboard-shortcuts.md) - All shortcut details
 - [Favorites Guide](favorites-guide.md) - Favorites feature overview
 - [Game Configuration Guide](game-config.md) - VRChat integration settings
+- [Terms of Service](terms.md) - Usage terms
+- [Privacy Policy](privacy.md) - Data handling
+- [License Information](../license.md) - Licenses and third-party software
 - [Troubleshooting Guide](troubleshooting.md) - Settings-related issues

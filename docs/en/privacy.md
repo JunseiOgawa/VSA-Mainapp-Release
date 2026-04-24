@@ -1,143 +1,94 @@
 # Privacy Policy
 
-Last Updated: December 24, 2025
-
----
+Last updated: April 24, 2026
 
 ## 1. Introduction
 
-This Privacy Policy (hereinafter "Policy") explains how FefaEther (hereinafter "the Operator") handles personal information and data in connection with the VRChat photo management application "Virtual Snap Archive" (hereinafter "the App" or "VSA").
+This Privacy Policy explains how FefaEther (the "Operator") handles data in the photo management application "Virtual Snap Archive" ("VSA" or the "App") and the related website.
 
-Please read this Policy carefully before using the App. By using the App, you consent to the data handling practices described in this Policy.
+VSA is local-first, but some features communicate with external services, including VSA account login, cloud storage, X posting, bot protection, and update checks.
 
----
+## 2. Data Stored Locally
 
-## 2. Data We Collect
+The App primarily stores the following data on your PC:
 
-### 2.1 Current Status
+- Photos and thumbnails
+- Photo metadata such as capture time, world name, users in the same instance, and camera information
+- App settings such as import folders, export destinations, display settings, and compression settings
+- User-created settings such as X posting presets
 
-Currently, the App stores the following data **locally on your computer only** and does not transmit data to the Operator's servers:
+Because users can choose watched folders and export destinations, VSA uses broad local file permissions. VSA does not collect or transmit unrelated files on your PC without a user-selected feature or setting.
 
-- **Photo Data**: Screenshots taken in VRChat (PNG, JXL formats, etc.)
-- **Metadata**: World information, camera settings, capture date/time, etc., attached to photos
-- **App Settings**: User preferences such as language settings, theme settings, folder path settings
-- **VRChat-Related Information**: World names, player information, etc., extracted from VRChat log files
+## 3. Data Sent Externally
 
-### 2.2 Potential Future Changes
+The following features send data externally when used.
 
-The following data collection may be implemented in future updates:
+### 3.1 VSA Account and Authentication
 
-- **Cloud Sync Data**: Data synchronization through integration with cloud services such as Google Drive
-- **Usage Statistics**: Anonymous usage data for the purpose of improving the App
-- **Crash Reports**: Error information for the purpose of improving App quality
-- **Account Information**: Authentication information when using cloud features
+For login, email verification, OAuth login, and desktop app linking, data such as email address, authentication state, device information, and OAuth results may be sent to and stored by the VSA website and Supabase. The desktop app stores VSA account access and refresh tokens in the operating system credential store.
 
-When these features are implemented, this Policy will be updated and users will be notified.
+If Google OAuth is used, Google's authorization screen and Google account information are used for authentication. For Google OAuth app publishing settings, use the latest privacy policy URL: `https://vsa-website-wine.vercel.app/en/privacy`.
 
----
+### 3.2 Cloud Storage
 
-## 3. Data Storage Location
+When cloud storage is enabled, selected photo files, file names, file sizes, MIME types, capture time, dimensions, and metadata are sent to the VSA website API and stored in cloud storage such as Cloudflare R2. Cloud storage is optional. Usage beyond the free allowance may require payment.
 
-### 3.1 Local Storage
+### 3.3 X Posting
 
-Currently, all user data is stored only in local storage on your computer. Users can configure the storage folder location.
+When X posting is used, the post text, selected images, X account linking status, monthly usage count, and plan information are sent to the VSA website API. VSA shows the monthly limit and post content before posting, and posts to X only after the user explicitly confirms each post. X OAuth authorization links the account; it is not blanket consent for future posts.
 
-### 3.2 Cloud Storage (Planned for Future)
+X posting may require payment when usage exceeds the free allowance. After posting, deletion or edits must be handled on X and may not be reversible from VSA.
 
-If cloud storage integration (such as Google Drive) is implemented in the future, data will be uploaded to the cloud only when explicitly enabled by the user. Cloud service usage is optional and can be disabled at the user's choice.
+### 3.4 Turnstile
 
----
+The website may use Cloudflare Turnstile on registration, login, verification, and related screens to prevent abuse. When Turnstile is used, Cloudflare may process IP address, User-Agent, browser/network signals, and related data.
 
-## 4. Purpose of Data Use
+### 3.5 External APIs and Update Checks
 
-Collected data is used only for the following purposes:
+Server status features may request VRChat status and Steam-related APIs. App update checks may access GitHub Releases or related update endpoints.
 
-1. Providing the basic features of the App
-2. Saving and applying user settings
-3. Managing photos and attaching metadata
-4. Improving App quality and fixing bugs (if statistical data is collected in the future)
+## 4. Purposes of Use
 
----
+The Operator uses collected data for:
 
-## 5. Sharing with Third Parties
+- Providing the App and related website
+- Running user-selected features such as photo management, cloud storage, and X posting
+- Managing login state, plans, and monthly usage counts
+- Preventing abuse, spam, and excessive use
+- Investigating incidents, improving security, and providing support
 
-### 5.1 Current Status
+## 5. Third-Party Services
 
-Currently, the Operator does not share user data with third parties.
+VSA may use the following third-party services:
 
-### 5.2 Future Third-Party Service Integration
+- Supabase: authentication, database, and session management
+- Cloudflare R2: cloud photo storage
+- Cloudflare Turnstile: bot and abuse prevention
+- Vercel: website and API hosting
+- Google: Google OAuth login
+- X: X account linking and posting
+- GitHub: update distribution
 
-Integration with the following services may be implemented in the future:
+Each third-party service may also apply its own privacy policy and terms.
 
-- **Google Drive**: Cloud backup of photos
-- **Authentication Services**: Providing account functionality
+## 6. Data Deletion
 
-When using these services, the privacy policies of each service will also apply.
+Local data can be deleted by removing the App's storage folders, database, and settings files. To request deletion of cloud data, account data, or X account linking data, use the account features on the related website or contact the Operator.
 
-### 5.3 Legal Requirements
+## 7. Security
 
-The Operator may disclose data to law enforcement or government agencies when required by law or when necessary to respond to legal proceedings.
+The Operator applies reasonable safeguards, including encrypted transport, operating system credential storage, access controls, and token management. However, no internet transmission or digital storage is completely secure.
 
----
+## 8. Minors
 
-## 6. Data Security
+Minors should use the App and related website with parental or guardian consent.
 
-The Operator takes reasonable security measures to protect user data. However, transmission over the Internet and digital storage are not 100% secure, so complete security of data cannot be guaranteed.
+## 9. Changes
 
----
+This Policy may be updated due to feature additions, third-party service changes, or legal requirements. Significant changes will be announced on the website, in the App, or in release notes.
 
-## 7. User Rights
+## 10. Contact
 
-### 7.1 Data Access
+For privacy questions, contact:
 
-All data stored locally is accessible on your computer at any time.
-
-### 7.2 Data Deletion
-
-All local data can be deleted by uninstalling the App and removing the associated storage folders.
-
-### 7.3 Changing Settings
-
-Various settings can be changed at any time through the App's settings screen.
-
----
-
-## 8. Children's Privacy
-
-The App is intended for users of all ages. If a child under 13 uses the App, parental supervision is recommended. The Operator does not intentionally collect personal information from children.
-
----
-
-## 9. International Data Transfers
-
-Currently, user data is stored locally, so no international data transfers occur. If cloud services are introduced in the future, data may be stored on servers outside of Japan, and this Policy will be updated accordingly.
-
----
-
-## 10. Changes to This Policy
-
-The Operator may modify this Policy as necessary. Significant changes will be communicated through in-app notifications or release notes during updates. Continued use of the App after changes constitutes acceptance of the modified Policy.
-
----
-
-## 11. Language
-
-This Policy is prepared in both Japanese and English. In case of any discrepancy between the two language versions, the Japanese version shall prevail.
-
----
-
-## 12. Contact
-
-For questions or inquiries regarding this Policy, or for data-related requests, please contact us at:
-
-**Email**: virtualsnaparchive@gmail.com
-
----
-
-## 13. Consent
-
-By installing and using the App, you consent to the data handling practices described in this Policy. If you do not agree with this Policy, please refrain from using the App.
-
----
-
-*This Policy is subject to change without notice. Please check regularly for updates.*
+virtualsnaparchive@gmail.com
