@@ -24,37 +24,211 @@ The screen has two tabs:
 
 ## Auto Compression
 
-Automatically executes compression on a regular schedule.
+Automatically executes compression based on a schedule. VSA monitors in the background and automatically runs based on conditions.
 
 ### Schedule Settings
 
+Fine-tune the auto compression execution schedule.
+
 | Setting | Description |
 |---------|-------------|
-| Interval | Compression interval (monthly) |
-| Start Day | Which day of the month to start |
-| Next Run | Next scheduled execution date |
+| **Interval** | Compression interval (days or months) |
+| **Start Day** | Date to start compression from |
+| **Next Run** | Next scheduled execution date/time (display only) |
+
+**Example**:
+```
+Interval: 7 days
+Start Day: Day 1
+```
+This schedule automatically runs compression every 7 days.
 
 ### Background Processing Settings
 
-| Setting | Description |
-|---------|-------------|
-| Auto Start | Automatically start when conditions are met |
-| Start Trigger | File count threshold for auto start |
-| Monitor Interval | Folder monitoring interval (minutes) |
-| Consider VRChat State | Pause while VRChat is running |
+Configure detailed settings for auto compression background operation.
 
-### VRChat Active Behavior
+| Setting | Default | Description |
+|---------|---------|-------------|
+| **Auto Start** | Enabled | Automatically start at scheduled time |
+| **Start Trigger** | 10 files | Start when unprocessed photos exceed this count |
+| **Monitor Interval** | 5 minutes | Check folder at this interval |
+| **Consider VRChat State** | Enabled | Pause compression while VRChat is running |
 
-When "Consider VRChat State" is enabled, compression processing pauses while VRChat is active. This prevents performance degradation during gameplay.
+### Detailed Operation Mechanism
+
+#### Schedule vs Trigger Relationship
+
+Auto compression runs under two conditions:
+
+**1. Scheduled Time (Periodic)**
+```
+Example: Auto compression starts every 1st of month at 00:00
+```
+
+**2. Unprocessed File Count Trigger (Event-driven)**
+```
+Example: Start when unprocessed photos reach 10+
+```
+
+When either condition is met, compression runs as a background process.
+
+#### VRChat State Monitoring Details
+
+When "Consider VRChat State" is enabled:
+
+```
+Scheduled Time
+    ↓
+VRChat Running?
+    ├─ Yes → Pause compression (waiting)
+    │        Resumes after VRChat closes
+    └─ No → Start compression
+```
+
+This prevents performance degradation during gameplay while automatically resuming after game closes.
+
+#### Monitor Interval Meaning
+
+Monitor interval is how frequently VSA scans the folder to count unprocessed files.
+
+```
+5-minute interval example:
+Time 0min → Scan (count files)
+Time 5min → Scan
+Time 10min → Scan (check trigger condition)
+...
+```
+
+**Recommended Settings**:
+- **Frequent VRChat use**: 5-10 minutes (quick detection)
+- **Occasional use**: 30 minutes (resource saving)
+- **Always-on setup**: 60 minutes (battery saving)
 
 ### Snooze Feature
 
-When a compression reminder appears, you can select from the following snooze options:
+When a compression reminder appears, select from snooze options:
 
-- Remind in 1 hour
-- Remind tomorrow
-- Remind in 1 week
-- Postpone until next scheduled run
+| Option | Description |
+|--------|-------------|
+| **Remind in 1 hour** | Show reminder again after 1 hour |
+| **Remind tomorrow** | Show at same time tomorrow |
+| **Remind in 1 week** | Show after 7 days |
+| **Postpone until next scheduled run** | Don't show until next scheduled execution |
+| **Compress now** | Start compression immediately |
+
+### Schedule Configuration Examples
+
+#### Example 1: Monthly compression on 1st
+
+```
+Interval: 30 days
+Start Day: 1st
+Auto Start: Enabled
+Start Trigger: 5 files
+Monitor Interval: 10 minutes
+Consider VRChat State: Enabled
+```
+
+**Operation Flow**:
+```
+1st Day 00:00 → Compression scheduled
+↓
+Unprocessed photos ≥ 5?
+├─ Yes → Start compression (pause if VRChat running)
+└─ No → Skip
+↓
+(Continue monitoring every 10 min, next scheduled run 31 days later)
+```
+
+#### Example 2: Weekly compression (aggressive)
+
+```
+Interval: 7 days
+Start Day: 5th (assume Friday)
+Auto Start: Enabled
+Start Trigger: 3 files
+Monitor Interval: 5 minutes
+```
+
+**Use case**:
+- Regular execution every Friday
+- Immediate processing if 3+ new photos exist
+- Pause during gaming
+
+#### Example 3: Auto-compress when photos accumulate (event-driven)
+
+```
+Interval: 0 (no scheduled runs)
+Auto Start: Enabled
+Start Trigger: 20 files
+Monitor Interval: 5 minutes
+```
+
+**Use case**:
+- No scheduled execution (event-driven only)
+- Auto-start when 20+ photos accumulate
+- Ideal for batch processing after sessions
+
+### Operations During Compression
+
+Most VSA features remain usable while compression runs:
+
+**Available Operations**:
+- ✅ Browse/search gallery
+- ✅ View photo details
+- ✅ Register/unregister favorites
+- ✅ Play VRChat
+- ✅ Change settings
+
+**Limitations**:
+- ⚠️ Manual compression not allowed concurrently (queued)
+- ⚠️ Monitoring may delay during heavy folder operations
+- ⚠️ Priority drops if system resources tight
+
+**Performance Considerations**:
+- Background processing runs at low priority
+- Automatically pauses when VRChat active
+- Minimal impact on other applications
+
+### Stop/Pause Auto Compression
+
+#### Disable Auto Execution
+
+Uncheck "Auto Start" to:
+- Disable scheduled execution
+- Ignore file count triggers
+- **Manual compression still available**
+
+#### Stop Current Compression
+
+To stop running compression mid-process:
+1. Click "Stop" button in progress panel
+2. Current file completes, then stops
+3. Can continue at next scheduled time
+
+### Troubleshooting
+
+#### Auto compression not running
+
+**Check**:
+1. **Auto Start enabled?**: Verify "Auto Start" checkbox
+2. **Schedule timing**: Check if "Next Run" is past or future
+3. **Trigger files**: Count unprocessed files vs start trigger
+4. **VRChat state**: If "Consider VRChat State" on, check if VRChat running
+5. **Disk space**: Verify sufficient free space available
+
+#### Compression started but stopped mid-way
+
+**Fixes by cause**:
+- **VRChat started** → Check "Consider VRChat State". Wait for automatic resume after VRChat closes or manually resume
+- **Disk space insufficient** → Delete unnecessary files and retry
+- **Network drive issues** → Try local drive
+
+#### Compression slower than expected
+
+- Decrease monitor interval (default 5 min → 1 min)
+- Lower start trigger (default 10 → 5)
+- Or use manual compression for immediate execution
 
 ## Manual Compression
 

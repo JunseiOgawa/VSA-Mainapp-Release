@@ -112,6 +112,98 @@ Parameter changes immediately reflect in VRChat camera.
 - OSC communication must be properly established
 - Network latency may cause frame delay reflection
 
+## Integral Camera Control
+
+Integral is a camera system for VRChat. You can operate it from the controller screen just like VirtualLens2.
+
+### Accessing Integral Controller
+
+From the Controller screen in the sidebar menu, switch tabs to use VirtualLens2 and Integral interchangeably.
+
+### Main Parameters
+
+#### Lens Settings
+
+| Parameter | Range | Description |
+|-----------|-------|-------------|
+| **Aperture** | 0.0 ～ 1.0 | Controls bokeh strength and brightness |
+| **Zoom** | 0.0 ～ 1.0 | Camera zoom level |
+| **Exposure** | 0.0 ～ 1.0 | Overall image brightness |
+
+#### Focus Control
+
+| Parameter | Description |
+|-----------|-------------|
+| **Focus Mode** | MF (Manual) / AF (Auto) / Visual AF |
+| **Focus Value** | Manual focus position adjustment |
+| **Pause AF** | Temporarily pause auto-focus |
+
+#### Bokeh Shape
+
+Select Integral's bokeh shape:
+
+| Shape | Description |
+|-------|-------------|
+| **Circle** | Natural, elegant bokeh (default) |
+| **Hexagon** | Geometric bokeh pattern |
+| **Star** | Sparkling light effect |
+| **Heart** | Cute presentation |
+| **Bubble** | Transparent bubble effect |
+
+**Bokeh Rotation**: Rotate bokeh shape to adjust angle.
+
+#### Shutter Control
+
+| Parameter | Description |
+|-----------|-------------|
+| **Shutter Speed** | Base exposure time |
+| **Shutter Speed Add** | Fine-tuning adjustment |
+| **Rolling Shutter** | Film camera shutter effect (OFF / Left→Right / Top→Bottom, etc.) |
+
+#### Lens Effects
+
+| Effect | Description |
+|--------|-------------|
+| **Vignetting** | Peripheral light falloff |
+| **Aperture Aspect** | Adjust aperture vertical/horizontal ratio |
+| **Chromatic Aberration** | Lens color separation effect |
+| **Spherical Aberration** | Lens characteristic simulation |
+
+#### Special Filters
+
+**Cross Filter**: Adds cross-shaped light effect
+- **Weight**: Filter effect strength
+- **Scale**: Cross size
+- **Angle**: Cross rotation angle
+
+#### Tilt (Tilt Shift)
+
+Tilt lens in X/Y direction for special focus effects.
+
+#### Composition Mode
+
+Select image processing algorithm:
+
+| Mode | Description |
+|------|-------------|
+| **Normal** | Standard image processing |
+| **Lighten** | Emphasize bright areas |
+| **Darken** | Emphasize dark areas |
+| **Depth** | Use depth information |
+| **Movie** | Film-style processing |
+
+#### Other Features
+
+| Feature | Description |
+|---------|-------------|
+| **Grid Display** | Show composition guide |
+| **Histogram** | Check exposure |
+| **Selfie Mode** | Front-facing camera |
+| **Auto Level** | Auto exposure adjustment |
+| **Drone Speed** | Movement speed in drone mode |
+
+---
+
 ## OSC Communication Settings
 
 ### What is OSC?
