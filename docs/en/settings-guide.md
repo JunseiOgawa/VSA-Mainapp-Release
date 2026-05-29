@@ -1,5 +1,10 @@
 # Settings Guide - Complete Reference
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 The Settings panel allows you to customize VSA's appearance, behavior, integrations, update checks, and user-facing legal/support information.
 
 ## Accessing Settings

@@ -1,5 +1,10 @@
 # JXL Compression Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 VSA provides image compression functionality using the JPEG XL (JXL) format. This guide explains how to configure and use JXL compression.
 
 ## What is JPEG XL?

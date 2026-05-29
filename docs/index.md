@@ -1,5 +1,9 @@
 # Virtual Snap Archive ドキュメント
 
+**【重要】** [⚖️ 利用規約（日本語）](./ja/terms.md) | [🔒 プライバシーポリシー（日本語）](./ja/privacy.md) | [Terms of Service](./en/terms.md) | [Privacy Policy](./en/privacy.md) | [📄 ライセンス情報](./license.md)
+
+---
+
 VSA（Virtual Snap Archive）の使い方、セットアップ、規約、プライバシー、ライセンス情報をまとめた公開ドキュメントです。
 
 ## 規約・プライバシー・ライセンス

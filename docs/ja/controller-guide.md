@@ -1,5 +1,10 @@
 # VirtualLens Controllerガイド
 
+[🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](./terms.md) | [🔒 プライバシーポリシー](./privacy.md)
+
+---
+
+
 VirtualLens Controllerは、VirtualLens2カメラの設定をリアルタイムで操作できる機能です。OSC（Open Sound Control）を通じてVRChat内のVirtualLens2アバターとの連携が可能です。
 
 ## VirtualLens Controllerの概要

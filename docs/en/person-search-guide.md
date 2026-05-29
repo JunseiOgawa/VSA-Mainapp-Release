@@ -1,5 +1,10 @@
 # Person Search Feature Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 The Person Search feature lets you quickly find photos containing specific VRChat users. Search by username, using romaji (romanized Japanese), and even search for multiple people in the same photos using AND logic.
 
 ## Overview

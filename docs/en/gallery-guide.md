@@ -1,5 +1,10 @@
 # Gallery Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 The gallery screen allows you to view imported photos in a list format, check detailed information, and perform operations such as adding favorites.
 
 > **Note (Integral support status)**

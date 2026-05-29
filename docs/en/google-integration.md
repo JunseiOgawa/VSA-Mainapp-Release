@@ -1,5 +1,10 @@
 # Google Integration
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 VSA can connect with your Google account to enable backup and synchronization to Google Photos and Drive. This guide explains how to set up Google login and use the backup features.
 
 ## Feature Overview

@@ -1,5 +1,10 @@
 # Retouch Feature Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 The retouch feature lets you edit photos directly within the application. You can adjust brightness, contrast, color temperature, tone curves, and more.
 
 ## Opening the Retouch Editor

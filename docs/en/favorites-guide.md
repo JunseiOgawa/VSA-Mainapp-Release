@@ -1,5 +1,10 @@
 # Favorites Feature Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 The Favorites feature allows you to mark important screenshots and manage them in a dedicated view. You can also automatically back up your favorite photos to Google Drive.
 
 ## Overview

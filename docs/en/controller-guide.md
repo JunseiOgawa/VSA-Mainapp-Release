@@ -1,5 +1,10 @@
 # VirtualLens Controller Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 VirtualLens Controller allows you to operate VirtualLens2 camera settings in real-time. Integration with VirtualLens2 avatars in VRChat is possible via OSC (Open Sound Control).
 
 ## VirtualLens Controller Overview

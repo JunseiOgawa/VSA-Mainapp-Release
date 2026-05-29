@@ -1,5 +1,10 @@
 # FAQ/Troubleshooting
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 This section covers frequently asked questions and solutions for common problems.
 
 > **Note (Integral support status)**

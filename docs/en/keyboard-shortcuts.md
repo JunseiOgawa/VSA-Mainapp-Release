@@ -1,5 +1,10 @@
 # Keyboard Shortcuts List
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 Here is a list of keyboard shortcuts available in the VSA app. This guide explains all shortcuts and how to customize them.
 
 ## Implemented Shortcuts

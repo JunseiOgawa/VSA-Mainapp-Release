@@ -1,5 +1,10 @@
 # Troubleshooting Detailed Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 This guide provides solutions for problems that may occur in the VSA application. It is organized to help you resolve issues systematically, with specific symptoms and step-by-step solutions provided for each problem.
 
 ## Common Problems and Solutions

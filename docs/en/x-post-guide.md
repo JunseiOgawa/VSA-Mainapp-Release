@@ -1,5 +1,10 @@
 # X Posting Feature Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 The X posting feature allows you to post photos edited in VSA to X (formerly Twitter). You can select multiple photos (up to 4) and post them with camera info frames.
 
 ## X Posting Feature Overview

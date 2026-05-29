@@ -1,5 +1,10 @@
 # Account Management Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 The Account Management screen allows you to connect to Google Drive and configure cloud backup settings for your favorite photos.
 
 ## Overview

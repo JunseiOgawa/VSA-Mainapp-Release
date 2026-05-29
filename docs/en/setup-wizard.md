@@ -1,5 +1,10 @@
 # Initial Setup Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 When you launch the VSA app for the first time, the setup wizard appears. This guide explains each step of the setup wizard in detail.
 
 ## Setup Wizard Overview

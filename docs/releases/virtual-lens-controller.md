@@ -1,5 +1,10 @@
 # VirtualLens/カメラコントローラ（リリースページ詳細）
 
+[🏠 ドキュメントトップ](../index.md) | [⚖️ 利用規約](../ja/terms.md) | [🔒 プライバシーポリシー](../ja/privacy.md)
+
+---
+
+
 ## 概要
 
 VRChat内のカメラ（VirtualLens2/Integral）をOSCでリアルタイム制御できる機能です。撮影の再現性と調整性を高めます。

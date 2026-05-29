@@ -1,5 +1,10 @@
 # Terms of Service
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 Last updated: April 24, 2026
 
 ## 1. Introduction

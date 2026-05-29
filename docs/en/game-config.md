@@ -1,5 +1,10 @@
 # Game Configuration Guide
 
+[🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
+
+---
+
+
 The Game Config panel allows you to configure VRChat integration settings and enable automatic metadata extraction for your screenshots.
 
 > **Note (Integral support status)**
