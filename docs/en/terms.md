@@ -33,6 +33,8 @@ When using external services, their terms, API policies, and privacy policies al
 
 Users are responsible for the photos, post text, metadata, and other content they manage, store, post, or share. Use VSA only in ways that respect copyright, likeness, privacy, and platform rules.
 
+Uploaded photo data is not used for AI training, model training, or similar purposes. However, uploaded content may be reviewed to the minimum extent necessary to determine whether there is a violation of these Terms, illegal use, a security issue, or another operational issue that requires investigation.
+
 ## 6. X Posting
 
 X posting is performed only when the user reviews the post content, selected images, and monthly usage status, then explicitly confirms the post. X OAuth authorization links an account; it is not blanket consent for future posts.
@@ -48,7 +50,8 @@ You may not:
 3. Attempt unauthorized access, excessive requests, or limit circumvention against VSA, related APIs, or external services
 4. Redistribute or sell the App installer or paid features without the Operator's permission
 5. Reverse engineer, modify, or analyze the App beyond what is permitted by law or applicable third-party open-source licenses
-6. Misrepresent an affiliation with the Operator, VRChat Inc., VirtualLens2, Integral, or their respective rights holders
+6. Intentionally upload images, documents, illustrations, third-party content, or any other data outside the intended scope of VRChat in-game photos
+7. Misrepresent an affiliation with the Operator, VRChat Inc., VirtualLens2, Integral, or their respective rights holders
 
 ## 8. Intellectual Property
 
@@ -56,7 +59,7 @@ The App name, logos, original code, UI, documentation, and related materials bel
 
 ## 9. Disclaimer
 
-The App and related website are provided as is. To the extent permitted by law, the Operator is not responsible for data loss, cloud storage failures, X posting failures, third-party service changes, OS/security software compatibility issues, or warnings caused by an unsigned installer. Users should back up important photos and data.
+The App and related website are provided as is. To the extent permitted by law, the Operator is not responsible for data loss, cloud storage failures, X posting failures, third-party service changes, OS/security software compatibility issues, or warnings caused by an unsigned installer. The Operator does not guarantee that photos or data will never be lost. Users should keep important photos and data backed up in more than one place.
 
 ## 10. Changes
 
