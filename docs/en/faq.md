@@ -120,6 +120,29 @@ This section covers frequently asked questions and solutions for common problems
 
 ---
 
+### Cloud Save Fails or Is Unavailable
+
+**Symptom:** Favorite cloud save fails, menus are missing, or errors appear
+
+**Solutions:**
+
+1. **Check rollout and plan**
+   - Cloud save is in staged rollout; verify plan and connection on the Account screen
+   - Menus may be hidden if not offered in your environment
+
+2. **Check network connection**
+   - Verify internet and Wi-Fi are active
+
+3. **Re-sign-in**
+   - Log out and sign in again from the Account screen
+
+4. **Local backup**
+   - Back up `favorites.db` separately for important favorites
+
+Pricing and limits follow in-app display and the [Terms of Service](./terms.md). See the [Favorites Guide](favorites-guide.md) and [Account Guide](account-guide.md).
+
+---
+
 ## Troubleshooting
 
 ### Finding VRChat Logs

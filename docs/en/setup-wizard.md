@@ -35,7 +35,7 @@ An introduction page for the VSA application.
 - VRChat photo management
 - JPEG XL compression feature
 - Automatic metadata extraction
-- Google Drive integration
+- Account-linked features (cloud save, share links, etc.—staged rollout)
 
 **Operations**:
 - "Next" button: Proceed to next step
@@ -300,7 +300,7 @@ After completing setup, recommend these steps:
 1. **Check Gallery**: Verify imported photos
 2. **Check Metadata**: Confirm world name and usernames display in photo details
 3. **Verify Game Config**: See [Game Config Guide](game-config.md) for complete VRChat setup
-4. **Google Drive Integration**: Perform Google Drive auth in [Account Guide](account-guide.md)
+4. **Account linking (optional)**: If cloud save or share links are available, see the [Account Guide](account-guide.md) (staged rollout)
 5. **Run Tutorial**: Learn features from in-app tutorial
 
 ## Related Documentation

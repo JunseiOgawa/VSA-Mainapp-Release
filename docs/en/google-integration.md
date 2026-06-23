@@ -1,179 +1,79 @@
-# Google Integration
+# Cloud and Account Integration (formerly Google Integration)
 
 [🏠 Document Top](../index.md) | [⚖️ Terms of Service](./terms.md) | [🔒 Privacy Policy](./privacy.md)
 
 ---
 
+VSA provides and expands account-linked features such as cloud save, share links, and X posting. Some environments may use third-party authentication (e.g. Google OAuth, X OAuth), but **this guide does not assume Google Drive or Google Photos are generally available to all users**.
 
-VSA can connect with your Google account to enable backup and synchronization to Google Photos and Drive. This guide explains how to set up Google login and use the backup features.
+## Feature Overview (Staged Rollout)
 
-## Feature Overview
+The following are subject to **staged rollout**. Availability depends on release status, plan, account status, and environment.
 
-By enabling Google integration, the following features become available:
+- Sign-in with a VSA account
+- Cloud save (optional backup for favorites and related data)
+- Share link generation
+- X posting integration
+- Cross-device sync (when offered)
 
-- Sign in with Google account
-- Automatic image upload to Google Photos
-- Backup synchronization to Google Drive
-- Image sharing across multiple devices
+If the relevant UI does not appear in the app, the feature may not be enabled for your environment yet.
 
-## Google Login
+## Guide Update Status
 
-### How to Login
+Earlier versions documented Google Photos and Google Drive steps in detail. Because public scope and implementation are evolving, **specific step-by-step instructions are being revised**.
 
-1. Open the Settings screen
-2. Select "Google Integration" section
-3. Click "Sign in with Google" button
-4. Select your Google account in the browser
-5. Grant access to VSA
+For now, rely on:
 
-### Required Permissions
+1. **In-app UI** (menus, buttons, error messages)
+2. **Canonical Terms and Privacy** on GitHub Pages
+   - [Terms of Service](./terms.md)
+   - [Privacy Policy](./privacy.md)
+3. Related guides
+   - [Account Management Guide](account-guide.md)
+   - [Favorites Guide](favorites-guide.md)
+   - [X Posting Feature Guide](x-post-guide.md)
 
-VSA requests access to the following Google services:
+## Typical Authentication Flow (When Shown)
 
-| Permission | Purpose |
-|------------|---------|
-| Google Photos (read/write) | Upload and manage images |
-| Google Drive (read/write) | Store backup files |
-| User info (basic) | Account identification |
+When external account linking is enabled:
 
-### Logout
+1. Open Settings or the Account screen
+2. Follow prompts for the VSA account or linked service
+3. Complete authentication in the browser and return to the app
+4. Verify connection status and plan
 
-You can disconnect your Google account at any time by selecting "Logout" in the "Google Integration" section of the Settings screen.
-
-## Google Photos Integration
-
-### Automatic Upload
-
-Images imported to VSA can be automatically uploaded to Google Photos.
-
-#### Configuration Options
-
-| Option | Description |
-|--------|-------------|
-| Auto Upload | Automatically upload new images |
-| Upload Quality | Original quality / High quality (storage saver) |
-| Album Settings | Specify destination album |
-| Preserve Metadata | Upload with VSA metadata preserved |
-
-#### Album Management
-
-- Automatically create albums by capture date
-- Organize albums by world
-- Custom album assignment
-
-### Manual Upload
-
-You can also upload selected images individually from the gallery.
-
-1. Select images in the gallery
-2. Right-click and select "Upload to Google Photos"
-3. Choose the destination album
-4. Execute upload
-
-## Google Drive Integration
-
-### Backup Synchronization
-
-Use Google Drive to backup VSA's database and settings to the cloud.
-
-#### Backup Contents
-
-| Item | Description |
-|------|-------------|
-| Image Files | Original images and thumbnails |
-| Metadata | Extracted VRChat information |
-| Database | Image index information |
-| Settings | Application configuration |
-
-#### Sync Options
-
-| Option | Description |
-|--------|-------------|
-| Auto Sync | Automatically backup on changes |
-| Sync Interval | Periodic backup interval (1 hour/1 day/1 week) |
-| Sync Folder | Destination folder on Drive |
-| Bandwidth Limit | Upload speed limitation |
-
-### Restore
-
-When using a new device or reinstalling VSA, you can restore data from Google Drive.
-
-1. Launch VSA
-2. Sign in with Google account
-3. Select "Restore from Backup"
-4. Choose the backup to restore
-5. Execute restore
-
-## Checking Sync Status
-
-### Status Indicator
-
-You can check the Google sync status in VSA's status bar.
-
-| Icon | Status |
-|------|--------|
-| Cloud (check) | Sync complete |
-| Cloud (arrow) | Syncing |
-| Cloud (x) | Sync error |
-| Cloud (offline) | Offline |
-
-### Sync Log
-
-You can view detailed sync logs from the Settings screen.
-
-- Upload/download history
-- Error details
-- Bandwidth usage
+Requested permissions vary by service and rollout stage. See the auth screen and [Privacy Policy](./privacy.md).
 
 ## Privacy and Security
 
-### Data Handling
+- Local data (favorites, settings) stays on your PC
+- Cloud save and sharing are described in the Privacy Policy
+- OAuth flows request least-privilege access where possible
+- Disconnect via the Account screen or the third-party service settings when available
 
-- Images and metadata are stored only in your Google account
-- Data does not pass through VSA servers
-- Secure authentication via OAuth 2.0
+## Troubleshooting (General)
 
-### Managing Access
+### Linking Menu Not Visible
 
-You can review or revoke VSA's access permissions at any time from your Google account settings.
+- Your environment may not be in the current rollout
+- Update the app and check account status
 
-1. Go to [Google Account Settings](https://myaccount.google.com/)
-2. Select "Security" → "Third-party apps & services"
-3. Select VSA to manage access permissions
+### Authentication Does Not Complete
 
-## Troubleshooting
+1. Verify internet connectivity
+2. Disable popup blockers
+3. Try another browser
+4. Restart VSA
 
-### Cannot Login
+### Sync or Upload Fails
 
-1. **Check internet connection**
-   - Verify your network connection is working
+1. Check plan, monthly limits, and free tiers in the app
+2. Use a stable network
+3. Keep local backups of important data
+4. See [Troubleshooting](troubleshooting.md) and [FAQ](faq.md) if issues persist
 
-2. **Check browser settings**
-   - Disable popup blockers
-   - Ensure cookies are enabled
+## Related Documentation
 
-3. **Check Google account status**
-   - Complete 2-factor authentication if enabled
-
-### Sync Not Completing
-
-1. **Check storage capacity**
-   - Verify available space in Google Drive/Photos
-
-2. **Check file size**
-   - Large files may take longer to upload
-
-3. **Check network status**
-   - Retry with a stable network connection
-
-### Upload Failing
-
-1. **Check file format**
-   - Supported image formats: PNG, JPEG, WEBP, JXL
-
-2. **Check permissions**
-   - Verify VSA has the required permissions
-
-3. **Re-authenticate**
-   - Log out and log in again
-
+- [Account Management Guide](account-guide.md)
+- [Terms of Service](./terms.md)
+- [Privacy Policy](./privacy.md)

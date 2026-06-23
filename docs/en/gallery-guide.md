@@ -346,6 +346,10 @@ The gallery performs smoothly even with large numbers of images thanks to virtua
 - Lazy loading of thumbnails
 - Page caching for fast redisplay
 
+## Cloud Save (Optional, Staged Rollout)
+
+Cloud backup for favorites is released in stages. Availability depends on release status, plan, account status, and environment. See the [Favorites Guide](favorites-guide.md) and [Account Guide](account-guide.md). Follow in-app UI for current controls.
+
 ## Current Limitations
 
 The following features are currently under development.

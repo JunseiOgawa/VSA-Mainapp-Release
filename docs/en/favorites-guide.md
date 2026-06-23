@@ -5,7 +5,7 @@
 ---
 
 
-The Favorites feature allows you to mark important screenshots and manage them in a dedicated view. You can also automatically back up your favorite photos to Google Drive.
+The Favorites feature lets you mark important screenshots and manage them in a dedicated view on your PC. When cloud save is available in your environment, you may also back up favorites to the cloud. This guide focuses on local favorites operations.
 
 ## Overview
 
@@ -13,7 +13,7 @@ With Favorites, you can:
 
 - **Mark Important Photos**: Add star marks to special screenshots
 - **Dedicated View**: Browse only your favorite photos in one place
-- **Google Drive Integration**: Automatically backup favorites to cloud storage
+- **Cloud Save (optional)**: Cloud backup for favorites in rollout-enabled environments
 - **Efficient Management**: Organize and access your best moments quickly
 
 ## Adding Favorites
@@ -104,173 +104,28 @@ Select multiple photos for batch actions.
 3. Checkbox at photo corner (if available)
 
 **Bulk Operations**:
-- **Upload to Google Drive**: Send selected favorites to cloud
+- **Save to Cloud** (when shown): Send selected favorites to cloud storage
 - **Remove from Favorites**: Bulk delete from favorites (keeps original files)
 
-## Google Drive Integration
+## Cloud Save (Optional, Staged Rollout)
 
-Automatically backup your favorite photos to Google Drive.
+Cloud backup for favorites is in **staged rollout**. Availability depends on release status, plan, account status, and environment.
 
-### Login Process (OAuth2 Authentication)
+When enabled, auto-save or manual save settings may appear on the Account screen or in favorites-related UI. Labels and controls vary by version—**follow the in-app UI**.
 
-**Step 1: Access Account Settings**:
-1. Click "Account" in the sidebar
-2. Account management screen opens
+Detailed steps in this guide will be updated over time. For now, see:
 
-**Step 2: Click "Login with Google Drive"**:
-1. Click the login button
-2. Web browser opens automatically
-3. Google login page displays
+- [Account Management Guide](account-guide.md)
+- [Terms of Service](./terms.md) / [Privacy Policy](./privacy.md)
 
-**Step 3: Select Account**:
-- Enter email/password if needed
-- Select account if multiple exist
-- Click "Use another account" for different account
+**Local favorites work without cloud features.** Back up `%APPDATA%\VSA\favorites.db` locally for important data.
 
-**Step 4: Authorize VSA**:
-1. Permission request screen appears
-2. Review requested permissions
-3. Click "Allow" or "Authorize" button
-4. Permissions shown:
-   - Google Drive read/write access
-   - VSA folder creation and management
-   - File upload capability
+### When Cloud Save Fails or Is Unavailable
 
-**Step 5: Return to VSA**:
-1. Browser automatically returns to VSA
-2. Account screen shows "Logged in"
-3. Email address displayed
-4. Logout button appears
-
-**Step 6: Confirmation**:
-- "Logged in" status visible
-- Google account email shown
-- Ready for sync operations
-
-### Auto-Upload Configuration
-
-Enable automatic cloud backup when marking photos as favorites.
-
-**Enable Auto-Upload**:
-1. Open Account settings
-2. Find "Auto-Upload" toggle
-3. Toggle ON
-4. Setting saves automatically
-
-**How It Works**:
-1. Click favorite star on photo
-2. Upload to Google Drive starts automatically
-3. Takes seconds to minutes depending on file size
-4. Status updates in UI
-
-**Upload Destination**:
-- Google Drive folder: `VSA` (auto-created)
-- Your private folder
-- Accessible from Google Drive web interface
-
-**Note**: Requires internet connection. Upload pauses if connection drops.
-
-### Manual Upload
-
-Upload favorite photos immediately without waiting for auto-upload.
-
-**Perform Manual Upload**:
-1. Open Account settings
-2. Click "Upload Now" button
-3. Upload process begins
-4. Progress bar shows status
-
-**Progress Indicators**:
-- Percentage complete (0-100%)
-- Files processed count ("3 / 10")
-- Current file information
-- Time remaining (if available)
-
-**Upload Duration**:
-- 1-10 photos: Several seconds to 1 minute
-- 11-50 photos: 1 to 5 minutes
-- 50+ photos: 5 to 30+ minutes (network dependent)
-
-**Network Requirements**:
-- Internet connection required
-- If connection drops, upload pauses
-- Resume by clicking "Upload Now" again
-- Previously uploaded files skipped automatically
-
-### Checking Upload Progress
-
-Real-time feedback during upload operations.
-
-**Displayed Information**:
-- Progress percentage: 0% to 100%
-- File count: "Current / Total"
-- Filename or thumbnail of current file
-- Speed and time remaining (if available)
-
-**Status Updates**:
-- Real-time progress shown
-- No need to refresh manually
-- Completion notification appears when done
-
-## Error Handling
-
-### Upload Failures
-
-**Symptom**: "Upload failed" error message
-
-**Possible Causes**:
-
-**No Internet Connection**:
-- Check network connection
-- Verify WiFi/Ethernet active
-- Wait for connection restore
-- Retry upload
-
-**Google Drive Storage Full**:
-- Check Google Drive storage usage
-- Delete unnecessary files
-- Upgrade to paid plan if needed
-- Retry after freeing space
-
-**Authentication Expired**:
-- Click "Re-login" button in Account settings
-- Re-authenticate with Google
-- Retry upload
-
-**File Size Issues**:
-- Some files too large for upload
-- Try uploading in smaller batches
-- Check file sizes on disk
-
-### Authentication Errors
-
-**Symptom**: "Authentication failed" message
-
-**Solutions**:
-
-**Browser Popup Blocked**:
-1. Check browser address bar
-2. Look for popup block notification
-3. Allow VSA popups
-4. Try login again
-
-**Security Software Blocking**:
-1. Check firewall settings
-2. Add VSA to firewall exceptions
-3. Disable antivirus temporarily (carefully)
-4. Try login again
-
-**Google Account Security**:
-1. Visit https://myaccount.google.com
-2. Open Security section
-3. Review "Less secure apps" setting
-4. May need to allow VSA access
-
-**Solution Steps**:
-1. Clear browser cache (Ctrl + Shift + Delete)
-2. Try different browser (Chrome recommended)
-3. Restart VSA
-4. Attempt login again
+- Check internet and account connection status
+- Review plan, monthly limits, and free tiers in the app
+- Allow browser pop-ups and try signing in again on auth errors
+- See [Troubleshooting](troubleshooting.md) if problems persist
 
 ## Data Management
 
@@ -341,91 +196,50 @@ Restore favorites from previous backup.
 3. Rebuild database
 4. Restart VSA
 
-### Google Drive Upload Fails
+### Cloud Save Fails or Is Unavailable
 
-**Symptom**: Upload stops with error midway
+**Symptom**: No cloud menu, or save stops with an error
 
 **Solutions**:
 
-**Network Connection Lost**:
-- Check internet connection
-- WiFi may have disconnected
-- Reconnect to network
-- Retry upload (continues where left off)
+**Check Rollout and Plan**:
+- Verify plan and connection on the Account screen
+- Menus may be hidden if the feature is not offered in your environment
 
-**Google Drive Full**:
-1. Open Google Drive in browser
-2. Check storage usage
-3. Delete old files
-4. Upgrade storage if needed
-5. Retry upload
+**Network Connection**:
+- Verify internet connectivity
+- Ensure VSA is allowed through the firewall
 
-**File Too Large**:
-- Individual files exceeding limit
-- Upload smaller batches
-- Check file sizes locally
+**Re-sign-in**:
+1. Log out or disconnect on the Account screen
+2. Sign in again following on-screen prompts
+3. Try manual save in smaller batches if offered
 
-**Retry Steps**:
-1. Check network/storage
-2. Click "Upload Now" again
-3. Previously uploaded files skip
-4. Resume from where stopped
-
-### Authentication Lost
-
-**Symptom**: "Re-login required" message appears
-
-**Causes**:
-- Google security system revoked token
-- Extended period without use
-- Suspected unauthorized access
-- Google password changed
-
-**Solution**:
-1. Click "Re-login" button
-2. Complete Google authentication again
-3. Resume uploads
+**Keep Local Backups**:
+- Copy `favorites.db` regularly; do not rely on cloud save alone
 
 ## Privacy and Security
 
 ### Data Protection
 
-**Authentication Tokens**:
+**Authentication Tokens** (when account linking is used):
 - Stored locally, encrypted
 - VSA application access only
-- Never sent to servers
-- Deleted on logout
+- Deleted on logout when applicable
 
-**Photo Data**:
-- Stored in your Google Drive only
-- "VSA" folder is private by default
-- Share folder if desired (your choice)
-- Google Drive encryption applies
-
-### Permissions
-
-**VSA Requests**:
-- Google Drive read/write permissions
-- VSA folder access only
-- File upload capability
-
-**VSA Does NOT Request**:
-- Email access
-- Calendar access
-- Contacts access
-- Other Google services
-- Account password (OAuth2 only)
+**Favorite Data**:
+- Stored locally in `favorites.db` on your PC
+- Cloud copies, when enabled, follow the Privacy Policy and in-app display
 
 ## Tips
 
 - **Regular Backups**: Backup favorites.db periodically
-- **Drive Sharing**: Share VSA folder on Google Drive with friends
-- **Offline Use**: Can mark favorites offline; uploading done later when online
-- **Selective Backup**: Only favorites are uploaded, not entire library
-- **Auto-Upload**: Enable for hands-free cloud backup workflow
+- **Share links**: Available in rollout-enabled environments ([Account Guide](account-guide.md))
+- **Offline use**: Mark favorites offline; cloud save runs when connectivity returns
+- **Selective backup**: Only favorites may be eligible for cloud save—not the entire library
 
 ## Related Documentation
 
-- [Account Management Guide](account-guide.md) - Google Drive authentication details
+- [Account Management Guide](account-guide.md) - VSA account and cloud save overview
 - [Gallery Operation Guide](gallery-guide.md) - Photo browsing and selection
 - [Troubleshooting Guide](troubleshooting.md) - Detailed problem solutions

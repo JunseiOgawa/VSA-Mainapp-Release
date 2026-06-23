@@ -340,50 +340,46 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 2. Restart VSA as well
 3. Launch VRChat
 
-### Google Drive Integration-Related Issues
+### Account Linking and Cloud Save
 
-#### Upload Fails
+#### Cloud Save Fails or Is Unavailable
 
-**Symptom**: Attempting to upload favorite photos to Google Drive results in an error
+**Symptom**: Favorite cloud save fails, menus are missing, or errors occur
 
 **Possible Causes**:
+- Environment not in current rollout, or plan/account status does not qualify
 - No network connection
-- Google Drive storage is full
-- Authentication has expired
+- Expired authentication or temporary third-party outage
 
 **Solution (Step-by-Step)**:
 
-**Step 1: Verify Network Connection**
+**Step 1: Check Rollout and Plan**
+1. Verify plan and connection on the Account screen
+2. If cloud menus are missing, the feature may not be offered yet
+3. Review the [Terms of Service](terms.md) and in-app pricing/limit display
+
+**Step 2: Verify Network Connection**
 1. Check the Windows network icon
 2. Verify internet connection is working properly
-3. Try accessing Google Drive in another browser
-4. If unable to access, restart your Wi-Fi router
-
-**Step 2: Check Google Drive Storage**
-1. Open Google Drive in a browser
-2. Check storage usage
-3. If full, delete unnecessary files
-4. For free plan, consider upgrading to a paid plan
+3. If unable to connect, restart your Wi-Fi router
 
 **Step 3: Verify Authentication Status**
 1. Open Account Settings
-2. Check Google Drive authentication status
-3. Click "Logout"
-4. Click "Login with Google Drive" to re-authenticate
+2. Check connection status
+3. Log out and sign in again following on-screen prompts
 
-**Step 4: Try Manual Upload**
-1. Follow the manual upload instructions in the Favorites Guide
-2. Verify that manual upload is possible
-3. If possible, review automatic upload settings
+**Step 4: Maintain Local Backups**
+1. Periodically copy `%APPDATA%\VSA\favorites.db`
+2. Do not rely on cloud save alone
 
 #### Authentication Error Occurs
 
-**Symptom**: "Authentication failed" error is displayed when logging in to Google Drive
+**Symptom**: "Authentication failed" or similar error during account linking
 
 **Possible Causes**:
 - Browser cache is corrupted
-- Google account security settings
 - Pop-up blocker is blocking login
+- Network or third-party service outage
 
 **Solution (Step-by-Step)**:
 
@@ -401,16 +397,10 @@ VSA's JPEG XL compression uses **lossless (reversible) compression**, so image q
 1. Try with another browser (Edge or Firefox)
 2. Verify if authentication succeeds
 
-**Step 4: Google Account Security Settings**
-1. Open Google Account Settings
-2. Click on "Security"
-3. Check "Allow less secure app access"
-4. Adjust settings as needed
-
-**Step 5: Restart VSA**
+**Step 4: Restart VSA**
 1. Completely close VSA
 2. Wait a few seconds
-3. Restart VSA and try logging in again
+3. Restart VSA and try linking again
 
 ### Notification-Related Issues
 
@@ -671,4 +661,4 @@ Please provide the following information:
 - [FAQ](faq.md) - Frequently Asked Questions
 - [Game-Side Configuration Guide](game-config.md) - Configuration Troubleshooting
 - [Settings Screen Complete Guide](settings-guide.md) - Settings Details
-- [Favorites Guide](favorites-guide.md) - Google Drive Integration Troubleshooting
+- [Favorites Guide](favorites-guide.md) - Cloud save and favorites troubleshooting
